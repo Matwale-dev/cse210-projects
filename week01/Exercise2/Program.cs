@@ -36,31 +36,6 @@ class Program
             letter = "F";
         }
 
-        // Stretch challenge: Determine the sign (+, -, or none)
-        int lastDigit = gradePercentage % 10;
-
-        if (letter != "F") // F never has + or -
-        {
-            if (lastDigit >= 7)
-            {
-                sign = "+";
-            }
-            else if (lastDigit < 3)
-            {
-                sign = "-";
-            }
-        }
-
-        // Handle special cases for A and F
-        if (letter == "A" && sign == "+")
-        {
-            sign = ""; // No A+
-        }
-        if (letter == "F")
-        {
-            sign = ""; // No F+ or F-
-        }
-
         // Output the final grade
         Console.WriteLine($"Your grade is: {letter}{sign}");
 
